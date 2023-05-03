@@ -1,0 +1,17 @@
+module negEdge(input,output);
+
+input input;
+output output;
+
+reg output;
+
+output = !input
+
+always@(negedge input)
+
+
+	begin
+		output = 1;
+	end
+
+endmodule

@@ -1,0 +1,32 @@
+module segmentpicker(L0,L1,L2,L3,A0,A1);
+input L0,L1,L2,L3;
+output A0,A1,O;
+
+reg A0,A1,O;
+
+always@(L0 || L1 || L2 || L3)
+		
+	begin
+		if(L0 == 0 & L1 ==0 & L2 == 0 & L3 == 0) begin
+			assign A0 = 0;
+			assign A1 = 0;
+		end else if(L0 == 0 & L1 ==0 & L2 == 0) begin 
+			assign A0 = 1;
+			assign A1 = 0;
+		end else if(L0 == 0 & L1 ==0)begin 
+			assign A0 = 0;
+			assign A1 = 1;
+		end else if(L0 == 0)begin 
+			assign A0 = 1;
+			assign A1 = 1;
+		end else begin
+			assign O = 1;
+		end
+	end
+
+
+
+
+
+
+endmodule
